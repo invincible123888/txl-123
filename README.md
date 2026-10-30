@@ -35,3 +35,4 @@ Windows + MinGW（g++ 13）或 Visual Studio 2022：
 - [ ] 改写成 class 版本（配合第 10 周「类和对象」）
 - [ ] 用 std::vector 替掉定长数组，去掉人数上限
 - [ ] 尝试二进制读写
+<img width="1270" height="752" alt="屏幕截图 2026-10-30 220609" src="https://github.com/user-attachments/assets/b6979fee-9eb7-48e4-bbcc-f94c719102b9" />
