@@ -1,24 +1,9 @@
-﻿/*
- * ================================================================
- *                     通 讯 录 系 统
- *        （依据黑马程序员 C++ 课程《通讯录管理系统》整理）
- * ================================================================
- * 功能：1.添加  2.显示  3.删除  4.查找  5.修改  6.清空  0.退出
- *
- * 技术要点（对应课程）：
- *   - 结构体嵌套、数组存数据
- *   - 指针传参：把通讯录地址传给函数，函数内修改实参
- *   - 模块化：每个功能封装成一个函数，main 中 switch 调用
- * ================================================================
- */
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-#define MAX 1000        // 通讯录最多容纳 1000 人
-
-/* =============== 结构体设计 =============== */
+#define MAX 1000        
 
 // 联系人结构体
 struct Person
@@ -37,8 +22,6 @@ struct Addressbooks
     int           m_Size;             // 当前记录人数
 };
 
-/* =============== 函数声明 =============== */
-
 void showMenu();                               // 菜单
 void addPerson(Addressbooks * abs);            // 1.添加联系人
 void showPerson(Addressbooks * abs);           // 2.显示联系人
@@ -47,8 +30,6 @@ void deletePerson(Addressbooks * abs);         // 3.删除联系人
 void findPerson(Addressbooks * abs);           // 4.查找联系人
 void modifyPerson(Addressbooks * abs);         // 5.修改联系人
 void cleanPerson(Addressbooks * abs);          // 6.清空联系人
-
-/* =============== 主函数 =============== */
 
 int main()
 {
@@ -67,7 +48,7 @@ int main()
         switch (select)
         {
         case 1:             // 添加
-            addPerson(&abs);        // 利用地址传递，函数内可修改实参
+            addPerson(&abs);        
             break;
         case 2:             // 显示
             showPerson(&abs);
