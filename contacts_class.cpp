@@ -17,11 +17,11 @@ public:
     string getName() const { return m_Name; }
 
     // 性别：1 = 男，2 = 女
-    void setSex(int sex) { m_Sex = sex; }
+    void setSex(int sex) { if (sex != 1 && sex != 2) return; m_Sex = sex; }
     int  getSex() const { return m_Sex; }
 
     // 年龄
-    void setAge(int age) { m_Age = age; }
+    void setAge(int age) {if (age < 0 || age > 150) return; m_Age = age; }
     int  getAge() const { return m_Age; }
 
     // 电话
